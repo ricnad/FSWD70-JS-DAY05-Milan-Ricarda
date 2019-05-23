@@ -6,14 +6,114 @@
 <body>
 
 	<script>
+		document.writeln("<h2>List of employees</h2>");
 		var employee = {
-			"UniqueID": "",
-			"FirstName":"",
-			"LastName":"",
-			"Email": "",
-			"Job": "",
-			"Salary":"",
-		}
+			"Info":[
+				{
+				"UniqueID": 11,
+				"FirstName":"Olivia",
+				"LastName":"Mayer",
+				"Email": "mayer@mycompany.at",
+				"Job": "Management",
+				"Salary":1234,
+				},
+				{
+				"UniqueID": 12,
+				"FirstName":"Harry",
+				"LastName":"Müller",
+				"Email": "meuller@mycompany.at",
+				"Job": "Consultant",
+				"Salary":1345,
+				},
+				{
+				"UniqueID": 13,
+				"FirstName":"Isla",
+				"LastName":"Haslo",
+				"Email": "haslo@mycompany.at",
+				"Job": "auditor",
+				"Salary":2345,
+				},
+				{
+				"UniqueID": 14,
+				"FirstName":"Jack",
+				"LastName":"Magro",
+				"Email": "magro@mycompany.at",
+				"Job": "Controller",
+				"Salary":3789,
+				},
+				{
+				"UniqueID": 15,
+				"FirstName":"Emily",
+				"LastName":"Holly",
+				"Email": "holly@mycompany.at",
+				"Job": "Teacher",
+				"Salary":3453,
+				},
+				{
+				"UniqueID": 16,
+				"FirstName":"Ava",
+				"LastName":"Kunert",
+				"Email": "kunert@mycompany.at",
+				"Job": "HR",
+				"Salary":1234,
+				},
+				{
+				"UniqueID": 17,
+				"FirstName":"Noah",
+				"LastName":"Kilary",
+				"Email": "kilary@mycompany.at",
+				"Job": "Developer",
+				"Salary":12334,
+				},
+				{
+				"UniqueID": 18,
+				"FirstName":"Charlie",
+				"LastName":"Knopf",
+				"Email": "knopf@mycompany.at",
+				"Job": "Webmaster",
+				"Salary":2345,
+				},
+				{
+				"UniqueID": 19,
+				"FirstName":"Jacob",
+				"LastName":"Müllner",
+				"Email": "muellner@mycompany.at",
+				"Job": "Underwriter",
+				"Salary":234,
+				},
+				{
+				"UniqueID": 20,
+				"FirstName":"Mia",
+				"LastName":"Triad",
+				"Email": "triad@mycompany.at",
+				"Job": "Broker",
+				"Salary":2345,
+				},
+				{
+				"UniqueID": 21,
+				"FirstName":"Sophia",
+				"LastName":"Turner",
+				"Email": "turner@mycompany.at",
+				"Job": "Actress",
+				"Salary":7893,
+				}]
+			};
+ 			
+			var i = 0
+    		document.writeln("<table border='0'><tr>");
+    		for (i = 0; i < employee.Info.length; i++) {
+		        document.writeln("<td>");
+		        document.writeln("<table border='1' width=300 >");
+		        document.writeln("<tr><td><b>Unique ID</b></td><td width=40>" + employee.Info[i].UniqueID + "</td></tr>");
+		        document.writeln("<tr><td><b>Name</b></td><td width=40>" + employee.Info[i].FirstName + "</td></tr>");
+		        document.writeln("<tr><td><b>Last Name</b></td><td width=40>" + employee.Info[i].LastName + "</td></tr>");
+		        document.writeln("<tr><td><b>E-Mail</b></td><td width=40>" + employee.Info[i].Email + "</td></tr>");
+		        document.writeln("<tr><td><b>Job</b></td><td width=40>" + employee.Info[i].Job + "</td></tr>");
+		        document.writeln("<tr><td><b>Salary</b></td><td width=40>" + employee.Info[i].Salary + "</td></tr>");
+		        document.writeln("</table>");
+		        document.writeln("</td>");
+    		}
+    		document.writeln("</tr></table>");
 	</script>
 
 </body>
