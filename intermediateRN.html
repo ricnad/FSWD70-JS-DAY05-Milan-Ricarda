@@ -7,8 +7,7 @@
 
 	<script>
 		document.writeln("<h2>List of employees</h2>");
-		var employee = {
-			"Info":[
+		var employee = [
 				{
 				"UniqueID": 11,
 				"FirstName":"Olivia",
@@ -96,24 +95,60 @@
 				"Email": "turner@mycompany.at",
 				"Job": "Actress",
 				"Salary":7893,
-				}]
-			};
- 			
-			var i = 0
-    		document.writeln("<table border='0'><tr>");
-    		for (i = 0; i < employee.Info.length; i++) {
-		        document.writeln("<td>");
-		        document.writeln("<table border='1' width=300 >");
-		        document.writeln("<tr><td><b>Unique ID</b></td><td width=40>" + employee.Info[i].UniqueID + "</td></tr>");
-		        document.writeln("<tr><td><b>Name</b></td><td width=40>" + employee.Info[i].FirstName + "</td></tr>");
-		        document.writeln("<tr><td><b>Last Name</b></td><td width=40>" + employee.Info[i].LastName + "</td></tr>");
-		        document.writeln("<tr><td><b>E-Mail</b></td><td width=40>" + employee.Info[i].Email + "</td></tr>");
-		        document.writeln("<tr><td><b>Job</b></td><td width=40>" + employee.Info[i].Job + "</td></tr>");
-		        document.writeln("<tr><td><b>Salary</b></td><td width=40>" + employee.Info[i].Salary + "</td></tr>");
-		        document.writeln("</table>");
-		        document.writeln("</td>");
+				}];
+
+			// var i = 0;
+   //  		document.writeln("<table border='1'>");
+   //  		for (i = 0; i < employee.Info.length; i++) {
+		 //        document.writeln("<tr><td>");
+		 //        document.writeln("<b>Unique ID</b></td><td width=40>" + employee.Info[i].UniqueID + "</td></tr>");
+		 //        document.writeln("<tr><td><b>Name</b></td><td width=40>" + employee.Info[i].FirstName + "</td></tr>");
+		 //        document.writeln("<tr><td><b>Last Name</b></td><td width=40>" + employee.Info[i].LastName + "</td></tr>");
+		 //        document.writeln("<tr><td><b>E-Mail</b></td><td width=40>" + employee.Info[i].Email + "</td></tr>");
+		 //        document.writeln("<tr><td><b>Job</b></td><td width=40>" + employee.Info[i].Job + "</td></tr>");
+		        // document.writeln("<tr><td><b>Salary</b></td><td width=40>" + employee.Info[i].Salary + "</td></tr>");
+    		// }
+    		//document.writeln("</table>");
+    		
+			var i = 0;
+    		document.writeln("<table border='0'>");
+    		for (i = 0; i < employee.length; i++) 
+    		{
+    		document.write(`
+							<table border='1' width=400>
+							
+							<tr> 
+							<td><b>Unique ID</b></td>
+							<td>${employee[i].UniqueID} </td>
+							</tr>
+
+							<tr> 
+							<td><b>First Name</b></td>
+							<td>${employee[i].FirstName} </td>
+							</tr>
+
+							<tr> 
+							<td><b>Last Name</b></td>
+							<td>${employee[i].LastName} </td>
+							</tr>
+
+							<tr> 
+							<td><b>Email adress</b></td>
+							<td>${employee[i].Email} </td>
+							</tr>
+
+							<tr> 
+							<td><b>Job Title</b></td>
+							<td>${employee[i].Job} </td>
+							</tr>
+
+							<tr> 
+							<td><b>Salary</b></td>
+							<td>${employee[i].Salary} </td><br>
+							</tr>
+
+    			`);
     		}
-    		document.writeln("</tr></table>");
 	</script>
 
 </body>
